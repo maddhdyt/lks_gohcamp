@@ -57,10 +57,6 @@ include 'partials/header.php'; ?>
                         <label>Keyword</label>
                         <input name="keyword" type="text" class="form-control" value="<?= $data['keyword'] ?>">
                     </div>
-                    <div class="form-group">
-                        <label>Slug</label>
-                        <input name="slug" type="text" class="form-control" value="<?= $data['slug'] ?>">
-                    </div>
                     <div class="card-footer text-right">
                         <a href="data_petugas.php" class="btn btn-danger">Cancel</a>
                         <input name="btnUpdate" type="submit" class="btn btn-primary ml-2" value="Submit">

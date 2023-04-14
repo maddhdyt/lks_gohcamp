@@ -369,8 +369,11 @@ header nav {
   display: grid;
   grid-template-columns: repeat(1, minmax(0, 1fr));
   grid-template-rows: repeat(1, minmax(0, 1fr));
-  gap: 70px;
+  gap: 40px;
   margin-top: 30px;
+}
+.about-wrapper .col-1 {
+  order: 2;
 }
 .about-wrapper .col-1 p {
   font-size: 14px;
@@ -380,24 +383,35 @@ header nav {
 }
 .about-wrapper .col-1 .statistic-card {
   display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   grid-template-rows: repeat(1, minmax(0, 1fr));
-  gap: 10px;
+  gap: 20px;
   padding: 30px;
   background-color: rgba(255, 136, 0, 0.1843137255);
   border-radius: 12px;
   margin-top: 50px;
 }
 .about-wrapper .col-1 .statistic-card .col p {
-  font-size: 16px;
+  font-size: 14px;
   color: #ff8a00;
   font-weight: 500;
 }
 .about-wrapper .col-1 .statistic-card .col h4 {
-  font-size: 32px;
+  font-size: 24px;
   color: #ff8a00;
   font-weight: 700;
-  margin-top: 10px;
+  margin-top: 8px;
+}
+.about-wrapper .col-1 .btn {
+  display: block;
+  border-radius: 8px;
+  margin-top: 20px;
+  padding: 15px 0;
+  text-align: center;
+  color: #fff;
+  font-size: 14px;
+  text-decoration: none;
+  background-color: #ff8a00;
 }
 .about-wrapper .col-2 iframe {
   width: 100%;
@@ -590,9 +604,10 @@ footer {
   overflow: hidden;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 .search-box .form-group .form-control {
-  width: 300px;
+  width: 100%;
   background-color: rgba(255, 136, 0, 0.1019607843);
   padding: 14px 18px;
   border-radius: 8px;
@@ -624,7 +639,7 @@ footer {
 
 .news-page-wrapper {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   grid-template-rows: repeat(1, minmax(0, 1fr));
   gap: 20px;
   margin-top: 50px;
@@ -732,17 +747,15 @@ footer {
 
 .news-detail-wrapper {
   display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
+  grid-template-columns: repeat(1, minmax(0, 1fr));
   grid-template-rows: repeat(1, minmax(0, 1fr));
   gap: 40px;
   margin-top: 40px;
 }
-.news-detail-wrapper .col-1 {
-  grid-column: span 3/span 3;
-}
 .news-detail-wrapper .col-1 .news-img {
   width: 100%;
-  height: 400px;
+  height: 200px;
+  border-radius: 4px;
   overflow: hidden;
   position: relative;
 }
@@ -756,7 +769,7 @@ footer {
   margin-top: 40px;
 }
 .news-detail-wrapper .col-1 .news-title h1 {
-  font-size: 24px;
+  font-size: 18px;
   color: #444;
   font-weight: 600;
 }
@@ -769,7 +782,7 @@ footer {
   margin-top: 20px;
 }
 .news-detail-wrapper .col-1 .news-desc p {
-  font-size: 16px;
+  font-size: 14px;
   color: #444;
   line-height: 24px;
   text-align: justify;
@@ -777,12 +790,9 @@ footer {
 .news-detail-wrapper .col-1 .news-desc .writer {
   font-style: italic;
   color: #444;
-  font-size: 16px;
+  font-size: 14px;
   margin-top: 50px;
   text-align: start;
-}
-.news-detail-wrapper .col-2 {
-  grid-column: span 2/span 2;
 }
 .news-detail-wrapper .col-2 .side-title {
   display: flex;
@@ -814,6 +824,7 @@ footer {
 .news-detail-wrapper .col-2 .side-news-wrapper .side-news .img {
   width: 80px;
   height: 80px;
+  flex-grow: 1;
   background-color: #ddd;
   overflow: hidden;
   position: relative;
@@ -836,6 +847,9 @@ footer {
   height: 100%;
   z-index: 2;
 }
+.news-detail-wrapper .col-2 .side-news-wrapper .side-news .desc {
+  width: 66%;
+}
 .news-detail-wrapper .col-2 .side-news-wrapper .side-news .desc span {
   font-size: 12px;
   color: rgba(68, 68, 68, 0.7921568627);
@@ -849,6 +863,12 @@ footer {
   font-weight: 600;
   margin-bottom: 4px;
   transition: all 500ms;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  /* number of lines to show */
+  line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 .news-detail-wrapper .col-2 .side-news-wrapper .side-news .desc a:hover {
   color: #ff8a00;
@@ -1036,6 +1056,25 @@ footer {
     font-size: 16px;
     line-height: 28px;
   }
+  .about-wrapper .col-1 .statistic-card {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    gap: 10px;
+  }
+  .about-wrapper .col-1 .statistic-card .col p {
+    font-size: 16px;
+  }
+  .about-wrapper .col-1 .statistic-card .col h4 {
+    font-size: 32px;
+    margin-top: 10px;
+  }
+  .about-wrapper .col-1 .btn {
+    font-size: 16px;
+  }
+  .about-wrapper .col-2 {
+    order: 2 !important;
+  }
   .galery-wrapper {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -1056,11 +1095,56 @@ footer {
   .news-wrapper .news-card .desc p {
     font-size: 14px;
   }
-  .news-page-wrapper .news-card .desc h4 {
-    font-size: 18px;
+  .search-box .form-group {
+    width: -moz-fit-content;
+    width: fit-content;
   }
-  .news-page-wrapper .news-card .desc p {
-    font-size: 14px;
+  .search-box .form-group .form-control {
+    width: 300px;
+  }
+  .news-page-wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .news-page-wrapper .news-card .img {
+    height: 200px;
+  }
+  .news-detail-wrapper {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    gap: 40px;
+  }
+  .news-detail-wrapper .col-1 {
+    grid-column: span 3/span 3;
+  }
+  .news-detail-wrapper .col-1 .news-img {
+    width: 100%;
+    height: 400px;
+  }
+  .news-detail-wrapper .col-1 .news-title h1 {
+    font-size: 24px;
+  }
+  .news-detail-wrapper .col-1 .news-title p {
+    font-size: 16px;
+  }
+  .news-detail-wrapper .col-1 .news-desc p {
+    font-size: 16px;
+  }
+  .news-detail-wrapper .col-1 .news-desc .writer-name {
+    font-size: 16px;
+  }
+  .news-detail-wrapper .col-2 {
+    grid-column: span 2/span 2;
+  }
+  .news-detail-wrapper .col-2 .side-news-wrapper .side-news .img {
+    flex-grow: 0;
+  }
+  .news-detail-wrapper .col-2 .side-news-wrapper .side-news .desc {
+    background-color: red;
+    flex-grow: 1;
   }
   .pagination {
     justify-content: start !important;

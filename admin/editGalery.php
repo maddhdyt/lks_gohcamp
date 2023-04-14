@@ -22,10 +22,6 @@ include 'partials/header.php'; ?>
                     <input type="hidden" name="id" value="<?= $id ?>">
                     <input type="hidden" name="imageOld" value="<?= $data['image'] ?>">
                     <div class="form-group">
-                        <label>Judul</label>
-                        <input name="title" type="text" class="form-control" value="<?= $data['title'] ?>">
-                    </div>
-                    <div class="form-group">
                         <label>Sumber</label>
                         <input name="source" type="text" class="form-control" value="<?=$data['source'] ?>">
                     </div>

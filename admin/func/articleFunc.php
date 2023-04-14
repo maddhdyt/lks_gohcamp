@@ -3,11 +3,12 @@ include '../core/conn.php';
 
 if (isset($_POST['btnSave'])) {
     $title = $_POST['title'];
-    $description = $_POST['description'];
+    $description = htmlspecialchars($_POST['description']);
     $date = date('Y-m-d');
     $writerName = $_POST['writerName'];
     $source = $_POST['source'];
     $keyword = $_POST['keyword'];
+    $slug = trim(str_replace(' ','-',$title),'-');
     $namafile = $_FILES['image']['name'] ;
     $dir = "../../assets/img/";
     $random = rand();
@@ -29,12 +30,12 @@ if (isset($_POST['btnUpdate'])) {
     $id = $_POST['id'];
     $imageOld = $_POST['imageOld'];
     $title = $_POST['title'];
-    $description = $_POST['description'];
+    $description = htmlspecialchars($_POST['description']);
     $date = date('Y-m-d');
     $writerName = $_POST['writerName'];
     $source = $_POST['source'];
     $keyword = $_POST['keyword'];
-    $slug = $_POST['slug'];
+    $slug = trim(str_replace(' ','-',$title),'-');
     $namafile = $_FILES['image']['name'] ;
     $dir = "../../assets/img/";
     $random = rand();

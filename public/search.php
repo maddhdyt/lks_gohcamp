@@ -98,12 +98,12 @@ if ($page < ($pages - $jumlahLink)) {
                         ?>
                             <div class="news-card">
                                 <div class="img">
-                                    <a href="article-detail.php?id=<?= $data['id_article'] ?>" class="news-link"></a>
+                                    <a href="artikel/<?= $data['id_article'] ?>/<?= $data['slug'] ?>" class="news-link"></a>
                                     <img src="../assets/img/<?= $data['image'] ?>">
                                 </div>
                                 <div class="desc">
                                     <h6><?= $data['date'] ?></h6>
-                                    <a href="article-detail.php?id=<?= $data['id_article'] ?>" class="title_link">
+                                    <a href="artikel/<?= $data['id_article'] ?>/<?= $data['slug'] ?>" class="title_link">
                                         <h4><?= $data['title'] ?></h4>
                                     </a>
                                 </div>

@@ -11,7 +11,6 @@ include 'partials/header.php'; ?>
                 <thead>
                     <tr>
                         <th>No</th>
-                        <th>Judul</th>
                         <th>Sumber</th>
                         <th>Gambar</th>
                         <th>Action</th>
@@ -25,7 +24,6 @@ include 'partials/header.php'; ?>
                 <tbody>
                         <tr>
                             <td><?= $no++ ?></td>
-                            <td><?= $data['title'] ?></td>
                             <td><?= substr($data['source'], "0", "20") . "..." ?></td>
                             <td>
                                 <a href="../assets/img/<?= $data['image'] ?>" target="_blank"><img class="rounded" src="../assets/img/<?= $data['image'] ?>" alt="" width="80px" height="50px"></a>

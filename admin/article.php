@@ -28,7 +28,7 @@ include 'partials/header.php'; ?>
                         <tr>
                             <td><?= $no++ ?></td>
                             <td><?= substr($data['title'], "0", "20") . "..."; ?></td>
-                            <td><?= substr($data['description'], "0", "20") . "..."; ?></td>
+                            <td><?= htmlspecialchars_decode(substr($data['description'], "0", "30") . "..."); ?></td>
                             <td><?= $data['date'] ?></td>
                             <td><?= $data['writer_name'] ?></td>
                             <td><a href="../assets/img/<?= $data['image'] ?>" target="_blank"><img class="rounded" src="../assets/img/<?= $data['image'] ?>" alt="" width="80px" height="50px"></a></td>

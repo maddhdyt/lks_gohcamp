@@ -1,0 +1,8 @@
+RewriteEngine On
+Options -indexes
+ErrorDocument 404 "File yang anda cari tidak di temukan!"
+ErrorDocument 403 "Stop kau mencuri resource ku!"
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^artikel/(.*)/([a-zA-Z0-9_-]+)/?$ public/article-detail.php?id=$1&slug=$2 [L]
+

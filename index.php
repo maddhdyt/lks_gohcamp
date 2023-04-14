@@ -17,6 +17,10 @@ $data4 = mysqli_fetch_assoc($statistic);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="<?= substr($data['profil_desc'], "0", "155") . "..."; ?>">
+    <meta name="keywords" content="Samalengoh, Samalengoh Camp, Samalengoh Sumedang, Tempat Camping di Sumedang, Wisata Alam Sumedang, Wisata di Sumedang, Kemping di Sumedang">
+    <meta name="author" content="Ahmad Hidayat">
+    <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,7 +46,7 @@ $data4 = mysqli_fetch_assoc($statistic);
                         <li><a href="">Tentang</a></li>
                         <li><a href="">Galeri</a></li>
                         <li><a href="">Berita</a></li>
-                        <li><a href="" class="icon-box"><i class='bx bx-phone-call'></i></a></li>
+                        <li><a href="https://wa.me/6283126902110?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="icon-box"><i class='bx bx-phone-call'></i></a></li>
                     </ul>
                     <div class="nav-toggle">
                         <i class='bx bx-menu'></i>
@@ -90,6 +94,9 @@ $data4 = mysqli_fetch_assoc($statistic);
                                  ?></h4>
                             </div>
                         </div>
+                        <a href="https://wa.me/6283126902110?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="btn">
+                            Booking Sekarang!
+                        </a>
                     </div>
                     <div class="col-2">
                         <iframe src="<?= $data['profil_video'] ?>" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
@@ -130,12 +137,12 @@ $data4 = mysqli_fetch_assoc($statistic);
                     ?>
                         <div class="news-card">
                             <div class="img">
-                                <a href="public/article-detail.php?id=<?= $data3['id_article'] ?>" class="news-link"></a>
+                                <a href="artikel/<?= $data3['id_article'] ?>/<?= $data3['slug'] ?>" class="news-link"></a>
                                 <img src="assets/img/<?= $data3['image'] ?>">
                             </div>
                             <div class="desc">
                                 <h6><?= $data3['date'] ?></h6>
-                                <a href="public/article-detail.php?id=<?= $data3['id_article'] ?>" class="title_link">
+                                <a href="artikel/<?= $data3['id_article'] ?>/<?= $data3['slug'] ?>" class="title_link">
                                     <h4><?= $data3['title'] ?></h4>
                                 </a>
                             </div>
@@ -155,7 +162,7 @@ $data4 = mysqli_fetch_assoc($statistic);
                         <p>Jauh dari kota, dekat dengan alam dengan kemping!</p>
                         <h2>Ayo Ngecamp di <br>
                             SAMALENGOH CAMP </h2>
-                        <a href="<?= $data['gmaps'] ?>" class="btn">Lihat di Maps</a>
+                        <a href="https://wa.me/6283126902110?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="btn">Hubungi Sekarang</a>
                     </div>
                     <div class="col-2">
                         <iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Samalengoh+Camp,+Gunturmekar,+Sumedang+Regency,+West+Java,+Indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
@@ -188,7 +195,7 @@ $data4 = mysqli_fetch_assoc($statistic);
                         <ul>
                             <li class="nav-title">Layanan Kami</li>
                             <li><a href="">Profil Wisata</a></li>
-                            <li><a href=""></a></li>
+                            <li><a href="">Berita</a></li>
                         </ul>
                         <ul>
                             <li class="nav-title">Hubungi Kami</li>

@@ -12,10 +12,6 @@ include 'partials/header.php'; ?>
                 </div>
                 <form action="func/galeryFunc.php" method="post" enctype="multipart/form-data" class="card-body">
                     <div class="form-group">
-                        <label>Judul</label>
-                        <input name="title" type="text" class="form-control">
-                    </div>
-                    <div class="form-group">
                         <label>Sumber</label>
                         <input name="source" type="text" class="form-control">
                     </div>

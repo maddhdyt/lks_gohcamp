@@ -461,10 +461,12 @@ header {
 
 // Section 2
 .about-wrapper {
-  @include grid(1, 1, 70px);
+  @include grid(1, 1, 40px);
   margin-top: 30px;
 
   .col-1 {
+    order: 2;
+
     p {
       font-size: 14px;
       color: #444;
@@ -472,25 +474,39 @@ header {
       line-height: 24px;
     }
 
-    .statistic-card { 
-      @include grid(3, 1, 10px);
+    .statistic-card {
+      @include grid(1, 1, 20px);
       padding: 30px;
       background-color: $primary-color-20;
       border-radius: 12px;
       margin-top: 50px;
+
       .col {
         p {
-          font-size: 16px;
+          font-size: 14px;
           color: $primary-color;
           font-weight: 500;
         }
+
         h4 {
-          font-size: 32px;
+          font-size: 24px;
           color: $primary-color;
           font-weight: 700;
-          margin-top: 10px;
+          margin-top: 8px;
         }
       }
+    }
+
+    .btn {
+      display: block;
+      border-radius: 8px;
+      margin-top: 20px;
+      padding: 15px 0;
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+      text-decoration: none;
+      background-color: $primary-color;
     }
   }
 
@@ -697,9 +713,10 @@ footer {
     overflow: hidden;
     display: flex;
     align-items: center;
+    width: 100%;
 
     .form-control {
-      width: 300px;
+      width: 100%;
       background-color: #ff88001a;
       padding: 14px 18px;
       border-radius: 8px;
@@ -735,7 +752,7 @@ footer {
 }
 
 .news-page-wrapper {
-  @include grid(4, 1, 20px);
+  @include grid(1, 1, 20px);
   margin-top: 50px;
 
   .news-card {
@@ -849,15 +866,14 @@ footer {
 
 // News Detail
 .news-detail-wrapper {
-  @include grid(5, 1, 40px);
+  @include grid(1, 1, 40px);
   margin-top: 40px;
 
   .col-1 {
-    @include col_span(3);
-
     .news-img {
       width: 100%;
-      height: 400px;
+      height: 200px;
+      border-radius: 4px;
       @include img_fit();
     }
 
@@ -865,7 +881,7 @@ footer {
       margin-top: 40px;
 
       h1 {
-        font-size: 24px;
+        font-size: 18px;
         color: #444;
         font-weight: 600;
       }
@@ -881,7 +897,7 @@ footer {
       margin-top: 20px;
 
       p {
-        font-size: 16px;
+        font-size: 14px;
         color: #444;
         line-height: 24px;
         text-align: justify;
@@ -890,7 +906,7 @@ footer {
       .writer {
         font-style: italic;
         color: #444;
-        font-size: 16px;
+        font-size: 14px;
         margin-top: 50px;
         text-align: start;
       }
@@ -898,7 +914,6 @@ footer {
   }
 
   .col-2 {
-    @include col_span(2);
 
     .side-title {
       display: flex;
@@ -930,6 +945,7 @@ footer {
         .img {
           width: 80px;
           height: 80px;
+          flex-grow: 1;
           background-color: #ddd;
           @include img_fit();
 
@@ -952,6 +968,7 @@ footer {
         }
 
         .desc {
+          width: 66%;
           span {
             font-size: 12px;
             color: #444444ca;
@@ -966,6 +983,12 @@ footer {
             font-weight: 600;
             margin-bottom: 4px;
             transition: all 500ms;
+            overflow: hidden;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            /* number of lines to show */
+            line-clamp: 1;
+            -webkit-box-orient: vertical;
 
             &:hover {
               color: $primary-color;
@@ -1190,6 +1213,29 @@ footer {
         font-size: 16px;
         line-height: 28px;
       }
+
+      .statistic-card {
+        @include grid(3, 1, 10px);
+
+        .col {
+          p {
+            font-size: 16px;
+          }
+
+          h4 {
+            font-size: 32px;
+            margin-top: 10px;
+          }
+        }
+      }
+
+      .btn {
+        font-size: 16px;
+      }
+    }
+
+    .col-2 {
+      order: 2 !important;
     }
   }
 
@@ -1215,15 +1261,76 @@ footer {
     }
   }
 
+  .search-box {
+    .form-group {
+      width: fit-content;
+      .form-control {
+        width: 300px;
+      }
+    }
+  }
+
   .news-page-wrapper {
+    @include grid(4, 1, 20px);
     .news-card {
-      .desc {
-        h4 {
-          font-size: 18px;
+      .img {
+        height: 200px;
+      }
+      // .desc {
+      //   h4 {
+      //     font-size: 18px;
+      //   }
+
+      //   p {
+      //     font-size: 14px;
+      //   }
+      // }
+    }
+  }
+
+  .news-detail-wrapper {
+    @include grid(5, 1, 40px);
+
+    .col-1 {
+      @include col_span(3);
+
+      .news-img {
+        width: 100%;
+        height: 400px;
+      }
+
+      .news-title {
+        h1 {
+          font-size: 24px;
         }
 
         p {
-          font-size: 14px;
+          font-size: 16px;
+        }
+      }
+
+      .news-desc {
+        p {
+          font-size: 16px;
+        }
+
+        .writer-name {
+          font-size: 16px;
+        }
+      }
+    }
+
+    .col-2 {
+      @include col_span(2);
+      .side-news-wrapper {
+        .side-news {
+          .img {
+            flex-grow: 0;
+          }
+          .desc {
+            background-color: red;
+            flex-grow: 1;
+          }
         }
       }
     }
