@@ -54,13 +54,13 @@ if ($page < ($pages - $jumlahLink)) {
             <nav class="navbar">
                 <div class="container">
                     <div class="logo">
-                        Sama<span class="text-primary">Camp</span>
+                        Goh<span class="text-primary">Camp</span>
                     </div>
                     <ul class="nav-menu">
-                        <li><a href="">Beranda</a></li>
-                        <li><a href="">Tentang</a></li>
-                        <li><a href="">Galeri</a></li>
-                        <li><a href="">Berita</a></li>
+                        <li><a href="/lks_sumedang/">Beranda</a></li>
+                        <li><a href="/lks_sumedang/index#about">Tentang</a></li>
+                        <li><a href="/lks_sumedang/index#galery">Galeri</a></li>
+                        <li><a href="/lks_sumedang/index#news">Berita</a></li>
                         <li><a href="" class="icon-box"><i class='bx bx-phone-call'></i></a></li>
                     </ul>
                     <div class="nav-toggle">

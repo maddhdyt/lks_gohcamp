@@ -170,7 +170,7 @@ html {
       .form-group {
         position: relative;
         margin-bottom: 15px;
-        .form-control{
+        .form-control {
           outline: none;
           width: 100%;
           padding: 16px 18px;
@@ -196,7 +196,6 @@ html {
     }
   }
 }
-
 
 // Header
 header {
@@ -719,6 +718,12 @@ header {
       color: #444444dc;
       margin-top: 10px;
       text-align: justify;
+      overflow: hidden;
+      display: -webkit-box;
+      -webkit-line-clamp: 4;
+      /* number of lines to show */
+      line-clamp: 4;
+      -webkit-box-orient: vertical;
     }
   }
 }
@@ -845,7 +850,7 @@ footer {
       color: #fff;
       font-size: 24px;
       right: 12px;
-      pointer-events: none
+      pointer-events: none;
     }
   }
 }
@@ -959,7 +964,7 @@ footer {
     }
 
     span {
-      font-weight: 600
+      font-weight: 600;
     }
   }
 }
@@ -1014,7 +1019,6 @@ footer {
   }
 
   .col-2 {
-
     .side-title {
       display: flex;
       align-items: center;
@@ -1219,9 +1223,9 @@ footer {
       font-size: 36px;
     }
 
-    .highlight{
+    .highlight {
       width: 60px;
-    height: 20px;
+      height: 20px;
     }
   }
 
@@ -1450,7 +1454,7 @@ footer {
   }
 
   .testimonial-wrapper {
-    @include grid(3, 1, 20px)
+    @include grid(3, 1, 20px);
   }
 
   .pagination {

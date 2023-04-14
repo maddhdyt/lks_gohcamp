@@ -46,7 +46,7 @@
             <nav class="navbar">
                 <div class="container">
                     <div class="logo">
-                        Sama<span class="text-primary">Camp</span>
+                        Goh<span class="text-primary">Camp</span>
                     </div>
                     <ul class="nav-menu">
                         <li><a href="">Beranda</a></li>

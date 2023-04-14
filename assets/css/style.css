@@ -622,6 +622,12 @@ header nav {
   color: rgba(68, 68, 68, 0.862745098);
   margin-top: 10px;
   text-align: justify;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  /* number of lines to show */
+  line-clamp: 4;
+  -webkit-box-orient: vertical;
 }
 
 footer {
