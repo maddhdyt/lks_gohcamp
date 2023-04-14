@@ -1,5 +1,5 @@
 <?php 
-include 'core/conn.php';
+include 'core/init.php';
 $title = "Setting";
 
 $show = mysqli_query($conn, "SELECT * FROM setting WHERE id_setting = 1");

@@ -62,7 +62,7 @@
             </nav>
             <div class="header-content">
                 <div class="header-title">
-                    <h2>Berita Samalengoh</h2>
+                    <h2>Berita</h2>
                 </div>
             </div>
         </header>

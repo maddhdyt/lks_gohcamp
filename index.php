@@ -2,8 +2,8 @@
 include 'admin/core/conn.php';
 
 $setting = mysqli_query($conn, "SELECT * FROM setting WHERE id_setting = 1");
-$article = mysqli_query($conn, "SELECT * FROM article ORDER BY date DESC LIMIT 4");
-$galery = mysqli_query($conn, "SELECT * FROM galery ORDER BY id DESC");
+$article = mysqli_query($conn, "SELECT * FROM article ORDER BY id_article DESC LIMIT 4");
+$galery = mysqli_query($conn, "SELECT * FROM galery ORDER BY id DESC LIMIT 10");
 $statistic = mysqli_query($conn, "SELECT * FROM statistic WHERE id = 1");
 
 $data = mysqli_fetch_assoc($setting);
@@ -31,7 +31,6 @@ $data4 = mysqli_fetch_assoc($statistic);
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <title>Samalengoh Camp Sumedang</title>
 </head>
-
 <body>
     <div class="wrapper">
         <header>
@@ -42,10 +41,10 @@ $data4 = mysqli_fetch_assoc($statistic);
                         Goh<span class="text-primary">Camp</span>
                     </div>
                     <ul class="nav-menu">
-                        <li><a href="">Beranda</a></li>
-                        <li><a href="">Tentang</a></li>
-                        <li><a href="">Galeri</a></li>
-                        <li><a href="">Berita</a></li>
+                        <li><a href="#">Beranda</a></li>
+                        <li><a href="#about">Tentang</a></li>
+                        <li><a href="#galery">Galeri</a></li>
+                        <li><a href="#news">Berita</a></li>
                         <li><a href="https://wa.me/6283126902110?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="icon-box"><i class='bx bx-phone-call'></i></a></li>
                     </ul>
                     <div class="nav-toggle">
@@ -65,7 +64,7 @@ $data4 = mysqli_fetch_assoc($statistic);
                 <span class="banner-source">source: <?= $data['source_banner'] ?></span>
             </div>
         </header>
-        <section>
+        <section id="about">
             <div class="container">
                 <div class="section-title">
                     <p>Tentang</p>
@@ -77,7 +76,7 @@ $data4 = mysqli_fetch_assoc($statistic);
                         <p><?= $data['profil_desc'] ?></p>
                         <div class="statistic-card">
                             <div class="col">
-                                <p>Pengunjung hari ini</p>
+                                <p>Pengunjung</p>
                                 <h4><?= $data4['visitors'] ?></h4>
                             </div>
                             <div class="col">
@@ -104,7 +103,39 @@ $data4 = mysqli_fetch_assoc($statistic);
                 </div>
             </div>
         </section>
-        <section>
+        <section id="testimonial">
+            <div class="container">
+                <div class="section-title">
+                    <p>Testimonial</p>
+                        <h2>Kesan Pengunjung</h2>
+                        <div class="highlight"></div>
+                    </div>
+                <div class="testimonial-wrapper">
+                    <div class="card">
+                        <div class="icon">
+                            <img src="assets/icon/Frame (1).svg">
+                        </div>
+                        <h2>Kazuhito Takeru</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus harum consectetur, aliquid accusamus suscipit quisquam, quod laudantium quae ea dolor a inventore sed. Modi, consectetur.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <img src="assets/icon/Frame (1).svg">
+                        </div>
+                        <h2>Kazuhito Takeru</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus harum consectetur, aliquid accusamus suscipit quisquam, quod laudantium quae ea dolor a inventore sed. Modi, consectetur.</p>
+                    </div>
+                    <div class="card">
+                        <div class="icon">
+                            <img src="assets/icon/Frame (1).svg">
+                        </div>
+                        <h2>Kazuhito Takeru</h2>
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus harum consectetur, aliquid accusamus suscipit quisquam, quod laudantium quae ea dolor a inventore sed. Modi, consectetur.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="galery">
             <div class="container">
                 <div class="section-title title-center">
                     <p>Galeri</p>
@@ -124,7 +155,7 @@ $data4 = mysqli_fetch_assoc($statistic);
                 </div>
             </div>
         </section>
-        <section>
+        <section id="news">
             <div class="container">
                 <div class="section-title">
                     <p>Berita</p>
@@ -211,7 +242,7 @@ $data4 = mysqli_fetch_assoc($statistic);
     <script src="assets/vendor/fancybox/fancy.umd.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <!-- <script src="assets/js/main.js"></script> -->
+    <script src="assets/js/swiper.js"></script>
     <script>
         <?php
         include 'assets/js/main.js';

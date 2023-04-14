@@ -1,5 +1,5 @@
 <?php 
-include 'core/conn.php';
+include 'core/init.php';
 
 $title = "Galeri";
 

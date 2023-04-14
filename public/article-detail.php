@@ -19,7 +19,7 @@ $latest = mysqli_query($conn, "SELECT * FROM article ORDER BY id_article DESC LI
     <meta name="keywords" content="<?= $data['keyword'] ?>">
     <meta name="author" content="John Doe">
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
-    <link rel="stylesheet" href="http://localhost/lks_sumedang/assets/css/style.css">
+    <link rel="stylesheet" href="/lks_sumedang/assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;900&family=Poppins&display=swap" rel="stylesheet">
@@ -53,7 +53,7 @@ $latest = mysqli_query($conn, "SELECT * FROM article ORDER BY id_article DESC LI
                 <div class="news-detail-wrapper">
                     <div class="col-1">
                         <div class="news-img">
-                            <img src="http://localhost/lks_sumedang/assets/img/<?= $data['image'] ?>" alt="">
+                            <img src="/lks_sumedang/assets/img/<?= $data['image'] ?>" alt="">
                         </div>
                         <div class="news-title">
                             <p><?= $data['date'] ?></p>
@@ -77,16 +77,16 @@ $latest = mysqli_query($conn, "SELECT * FROM article ORDER BY id_article DESC LI
                             ?>
                                 <div class="side-news">
                                     <div class="img">
-                                        <a href="http://localhost/lks_sumedang/artikel/<?= $data2['id_article'] ?>/<?= $data2['slug'] ?>"></a>
-                                        <img src="http://localhost/lks_sumedang/assets/img/<?= $data2['image'] ?>" alt="">
+                                        <a href="/lks_sumedang/artikel/<?= $data2['id_article'] ?>/<?= $data2['slug'] ?>"></a>
+                                        <img src="/lks_sumedang/assets/img/<?= $data2['image'] ?>" alt="">
                                     </div>
                                     <div class="desc">
-                                        <a href="http://localhost/lks_sumedang/artikel/<?= $data2['id_article'] ?>/<?= $data2['slug'] ?>"><?= $data2['title'] ?></a>
+                                        <a href="/lks_sumedang/artikel/<?= $data2['id_article'] ?>/<?= $data2['slug'] ?>"><?= $data2['title'] ?></a>
                                         <span><?= $data2['date'] ?></span>
                                     </div>
                                 </div>
                             <?php endwhile; ?>
-                            <a href="http://localhost/lks_sumedang/public/article.php" class="btn-back">
+                            <a href="/lks_sumedang/public/article.php" class="btn-back">
                                 <i class='bx bx-left-arrow-alt'></i>Daftar Berita
                             </a>
                         </div>

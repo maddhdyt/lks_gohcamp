@@ -1,5 +1,5 @@
 <?php 
-include 'core/conn.php';
+include 'core/init.php';
 $title = "Statistic";
 
 $show = mysqli_query($conn, "SELECT * FROM statistic WHERE id = 1");

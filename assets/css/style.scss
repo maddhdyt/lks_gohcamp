@@ -1,7 +1,6 @@
 $primary-color: #ff8a00;
 $primary-color-20: #ff88002f;
 $main-font: "Montserrat", sans-serif;
-$color: #ffa228;
 
 @mixin flex($align, $justify) {
   display: flex;
@@ -41,6 +40,10 @@ $color: #ffa228;
   padding: 0;
   box-sizing: border-box;
   font-family: $main-font;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 // Utility
@@ -96,7 +99,7 @@ $color: #ffa228;
 
   p {
     color: #444;
-    font-size: 16px;
+    font-size: 14px;
   }
 
   h2 {
@@ -107,8 +110,8 @@ $color: #ffa228;
   }
 
   .highlight {
-    width: 60px;
-    height: 20px;
+    width: 40px;
+    height: 15px;
     background-color: $primary-color;
     position: absolute;
     right: -5px;
@@ -135,6 +138,65 @@ $color: #ffa228;
   margin: 0 auto;
   margin-top: 50px;
 }
+// Auth
+.login-wrapper {
+  width: 100%;
+  margin: 150px auto;
+  @include flex(center, center);
+  .card-login {
+    width: 450px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 8px;
+    padding: 30px;
+    background-color: #fff;
+    p {
+      color: #444;
+      font-size: 14px;
+      margin-top: 5px;
+    }
+    .logo {
+      font-size: 32px;
+      font-weight: 600;
+      color: #444;
+      transition: all 500ms;
+
+      span {
+        font-weight: 800;
+      }
+    }
+
+    .form-login {
+      margin-top: 20px;
+      .form-group {
+        position: relative;
+        margin-bottom: 15px;
+        .form-control{
+          outline: none;
+          width: 100%;
+          padding: 16px 18px;
+          border: 1px solid #ddd;
+          border-radius: 8px;
+          transition: all 500ms;
+          font-size: 14px;
+          &:focus {
+            border: 1px solid $primary-color;
+          }
+        }
+        .btn-submit {
+          padding: 16px 18px;
+          background-color: $primary-color;
+          color: #fff;
+          border: none;
+          outline: none;
+          border-radius: 8px;
+          width: 100%;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
 
 // Header
 header {
@@ -158,7 +220,15 @@ header {
 }
 
 .page-header {
-  height: 300px;
+  height: 250px;
+  .header-content {
+    .header-title {
+      h2 {
+        font-size: 24px;
+        margin-top: 50px;
+      }
+    }
+  }
 }
 
 .news-page-header {
@@ -376,8 +446,8 @@ header {
     }
 
     .highlight {
-      width: 100px;
-      height: 40px;
+      width: 60px;
+      height: 20px;
       position: absolute;
       background-color: $primary-color;
       right: 0;
@@ -549,6 +619,7 @@ header {
 
   .news-card {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 
     .img {
       width: 100%;
@@ -620,6 +691,34 @@ header {
         margin-top: 10px;
         font-weight: 500;
       }
+    }
+  }
+}
+
+// Section 5
+.testimonial-wrapper {
+  @include grid(1, 1, 20px);
+  margin-top: 40px;
+  .card {
+    padding: 35px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    background-color: #fff;
+    .icon {
+      width: 40px;
+      @include img_fit();
+    }
+    h2 {
+      font-size: 18px;
+      color: #444;
+      font-weight: 600;
+      margin-top: 10px;
+    }
+    p {
+      font-size: 14px;
+      color: #444444dc;
+      margin-top: 10px;
+      text-align: justify;
     }
   }
 }
@@ -757,6 +856,7 @@ footer {
 
   .news-card {
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
 
     .img {
       width: 100%;
@@ -945,6 +1045,7 @@ footer {
         .img {
           width: 80px;
           height: 80px;
+          border-radius: 4px;
           flex-grow: 1;
           background-color: #ddd;
           @include img_fit();
@@ -1111,11 +1212,28 @@ footer {
     margin-top: 120px;
 
     p {
-      font-size: 18px;
+      font-size: 16px;
     }
 
     h2 {
-      font-size: 42px;
+      font-size: 36px;
+    }
+
+    .highlight{
+      width: 60px;
+    height: 20px;
+    }
+  }
+
+  .page-header {
+    height: 300px;
+    .header-content {
+      .header-title {
+        h2 {
+          font-size: 28px;
+          margin-top: 0;
+        }
+      }
     }
   }
 
@@ -1130,6 +1248,7 @@ footer {
         align-items: center;
         position: static;
         width: fit-content;
+        height: fit-content;
         margin: 0;
         padding: 0;
         background-color: transparent;
@@ -1171,6 +1290,10 @@ footer {
       width: 50%;
       font-size: 16px;
       line-height: 28px;
+    }
+    .highlight {
+      width: 100px;
+      height: 40px;
     }
   }
 
@@ -1276,15 +1399,6 @@ footer {
       .img {
         height: 200px;
       }
-      // .desc {
-      //   h4 {
-      //     font-size: 18px;
-      //   }
-
-      //   p {
-      //     font-size: 14px;
-      //   }
-      // }
     }
   }
 
@@ -1328,12 +1442,15 @@ footer {
             flex-grow: 0;
           }
           .desc {
-            background-color: red;
             flex-grow: 1;
           }
         }
       }
     }
+  }
+
+  .testimonial-wrapper {
+    @include grid(3, 1, 20px)
   }
 
   .pagination {

@@ -1,6 +1,6 @@
 <?php
 
-include 'core/conn.php';
+include 'core/init.php';
 $title = "Home";
 
 $article = mysqli_query($conn, "SELECT * FROM article");
