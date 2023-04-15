@@ -23,11 +23,11 @@ include 'partials/header.php'; ?>
                     <input type="hidden" name="imageOld" value="<?= $data['image'] ?>">
                     <div class="form-group">
                         <label>Sumber</label>
-                        <input name="source" type="text" class="form-control" value="<?=$data['source'] ?>">
+                        <input name="source" type="text" class="form-control" value="<?=$data['source'] ?>" required> 
                     </div>
                     <div class="form-group">
                         <label>Gambar</label>
-                        <input name="image" type="file" class="form-control" accept="image/*">
+                        <input name="image" type="file" class="form-control" accept="image/*" required>
                     </div>
                     <div class="card-footer text-right">
                         <a href="" class="btn btn-danger">Cancel</a>

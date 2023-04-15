@@ -35,7 +35,7 @@ include 'partials/header.php'; ?>
                     <input type="hidden" name="imageOld" value="<?= $data['image'] ?>">
                     <div class="form-group">
                         <label>Judul</label>
-                        <input name="title" type="text" class="form-control" value="<?= $data['title'] ?>">
+                        <input name="title" type="text" class="form-control" value="<?= $data['title'] ?>" required>
                     </div>
                     <div class="form-group">
                         <label>Deskripsi</label>
@@ -43,19 +43,19 @@ include 'partials/header.php'; ?>
                     </div>
                     <div class="form-group">
                         <label>Nama Penulis</label>
-                        <input name="writerName" type="text" class="form-control" value="<?= $data['writer_name'] ?>">
+                        <input name="writerName" type="text" class="form-control" value="<?= $data['writer_name'] ?>" required>
                     </div>
                     <div class="form-group">
                         <label>Gambar</label>
-                        <input name="image" type="file" class="form-control" value="" accept="image/*">
+                        <input name="image" type="file" class="form-control" value="" accept="image/*" required>
                     </div>
                     <div class="form-group">
                         <label>Sumber</label>
-                        <input name="source" type="text" class="form-control" value="<?= $data['img_src'] ?>">
+                        <input name="source" type="text" class="form-control" value="<?= $data['img_src'] ?>" required>
                     </div>
                     <div class="form-group">
                         <label>Keyword</label>
-                        <input name="keyword" type="text" class="form-control" value="<?= $data['keyword'] ?>">
+                        <input name="keyword" type="text" class="form-control" value="<?= $data['keyword'] ?>" required>
                     </div>
                     <div class="card-footer text-right">
                         <a href="data_petugas.php" class="btn btn-danger">Cancel</a>

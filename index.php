@@ -11,7 +11,7 @@ $data4 = mysqli_fetch_assoc($statistic);
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" translate="no">
 
 <head>
     <meta charset="UTF-8">
@@ -21,6 +21,7 @@ $data4 = mysqli_fetch_assoc($statistic);
     <meta name="keywords" content="Samalengoh, Samalengoh Camp, Samalengoh Sumedang, Tempat Camping di Sumedang, Wisata Alam Sumedang, Wisata di Sumedang, Kemping di Sumedang">
     <meta name="author" content="Ahmad Hidayat">
     <meta name='robots' content='index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+    <meta name="google" content="notranslate">
     <link rel="stylesheet" href="assets/css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -41,11 +42,11 @@ $data4 = mysqli_fetch_assoc($statistic);
                         Goh<span class="text-primary">Camp</span>
                     </div>
                     <ul class="nav-menu">
-                        <li><a href="#">Beranda</a></li>
-                        <li><a href="#about">Tentang</a></li>
-                        <li><a href="#galery">Galeri</a></li>
-                        <li><a href="#news">Berita</a></li>
-                        <li><a href="https://wa.me/6283126902110?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="icon-box"><i class='bx bx-phone-call'></i></a></li>
+                        <li><a onclick="hideNavbar()" href="#">Beranda</a></li>
+                        <li><a onclick="hideNavbar()" href="#about">Tentang</a></li>
+                        <li><a onclick="hideNavbar()" href="#galery">Galeri</a></li>
+                        <li><a onclick="hideNavbar()" href="/lks_sumedang/public/article.php">Berita</a></li>
+                        <li><a onclick="hideNavbar()" href="https://wa.me/6283126902110?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="icon-box"><i class='bx bx-phone-call'></i></a></li>
                     </ul>
                     <div class="nav-toggle">
                         <i class='bx bx-menu'></i>
@@ -190,10 +191,17 @@ $data4 = mysqli_fetch_assoc($statistic);
             <div class="container">
                 <div class="maps">
                     <div class="col-1">
-                        <p>Jauh dari kota, dekat dengan alam dengan kemping!</p>
-                        <h2>Ayo Ngecamp di <br>
-                            SAMALENGOH CAMP </h2>
-                        <a href="https://wa.me/6283126902110?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="btn">Hubungi Sekarang</a>
+                        <h2>Kontak Kami</h2>
+                        <div class="contact-group">
+                            <i class='bx bx-map-alt'></i><p><?= $data['address'] ?></p>
+                        </div>
+                        <div class="contact-group">
+                        <i class='bx bx-envelope' ></i><p><?= $data['email'] ?></p>
+                        </div>
+                        <div class="contact-group">
+                            <i class='bx bxl-whatsapp'></i><p><?= $data['contact'] ?></p>
+                        </div>
+                        <a href="https://wa.me/6283126902110?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="btn"><p>Hubungi via</p> <i class='bx bxl-whatsapp'></i></a>
                     </div>
                     <div class="col-2">
                         <iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Samalengoh+Camp,+Gunturmekar,+Sumedang+Regency,+West+Java,+Indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
@@ -209,30 +217,30 @@ $data4 = mysqli_fetch_assoc($statistic);
                             Goh<span class="text-primary">Camp</span>
                         </div>
                         <div class="icon-group">
-                            <div class="icon"><i class='bx bxl-facebook'></i></div>
-                            <div class="icon"><i class='bx bxl-instagram'></i></div>
-                            <div class="icon"><i class='bx bxl-tiktok'></i></div>
-                            <div class="icon"><i class='bx bxl-youtube'></i></div>
+                            <a href="<?= $data['med_facebook'] ?>" class="icon"><i class='bx bxl-facebook'></i></a>
+                            <a href="<?= $data['med_instagram'] ?>" class="icon"><i class='bx bxl-instagram'></i></a>
+                            <a href="<?= $data['med_tiktok'] ?>" class="icon"><i class='bx bxl-tiktok'></i></a>
+                            <a href="<?= $data['med_youtube'] ?>" class="icon"><i class='bx bxl-youtube'></i></a>
                         </div>
                     </div>
                     <div class="col-2">
                         <ul>
                             <li class="nav-title">Navigasi Cepat</li>
-                            <li><a href="">Beranda</a></li>
-                            <li><a href="">Tentang</a></li>
-                            <li><a href="">Galeri</a></li>
-                            <li><a href="">Berita</a></li>
+                            <li><a href="#">Beranda</a></li>
+                            <li><a href="#about">Tentang</a></li>
+                            <li><a href="#galery">Galeri</a></li>
+                            <li><a href="#news">Berita</a></li>
                         </ul>
                         <ul>
                             <li class="nav-title">Layanan Kami</li>
-                            <li><a href="">Profil Wisata</a></li>
-                            <li><a href="">Berita</a></li>
+                            <li><a href="#about">Profil Wisata</a></li>
+                            <li><a href="/lks_sumedang/public/article.php">Berita</a></li>
                         </ul>
                         <ul>
                             <li class="nav-title">Hubungi Kami</li>
-                            <li><a href=""><?= $data['address'] ?></a></li>
-                            <li><a href="">Phone : <?= $data['contact'] ?></a></li>
-                            <li><a href="">Email : <?= $data['email'] ?></a></li>
+                            <li><p><?= $data['address'] ?></p></li>
+                            <li><p>Phone : <?= $data['contact'] ?></p></li>
+                            <li><p>Email : <?= $data['email'] ?></p></li>
                         </ul>
                     </div>
                 </div>

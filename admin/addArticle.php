@@ -25,33 +25,28 @@ include 'partials/header.php'; ?>
                 <form action="func/articleFunc.php" method="post" enctype="multipart/form-data" class="card-body">
                     <div class="form-group">
                         <label>Judul</label>
-                        <input name="title" type="text" class="form-control">
+                        <input name="title" type="text" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label>Isi</label>
                         <textarea name="description" id="ckeditor" style="height: 500px;"></textarea>
-                        <!-- <input name="description" type="text" class="form-control"> -->
                     </div>
                     <div class="form-group">
                         <label>Nama Penulis</label>
-                        <input name="writerName" type="text" class="form-control">
+                        <input name="writerName" type="text" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label>Gambar</label>
-                        <input name="image" type="file" class="form-control" accept="image/*">
+                        <input name="image" type="file" class="form-control" accept="image/*" required>
                     </div>
                     <div class="form-group">
                         <label>Sumber</label>
-                        <input name="source" type="text" class="form-control">
+                        <input name="source" type="text" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label>Keyword</label>
-                        <input name="keyword" type="text" class="form-control">
+                        <input name="keyword" type="text" class="form-control" required>
                     </div>
-                    <!-- <div class="form-group">
-                        <label>Slug</label>
-                        <input name="slug" type="text" class="form-control">
-                    </div> -->
                     <div class="card-footer text-right">
                         <a href="data_petugas.php" class="btn btn-danger">Cancel</a>
                         <input name="btnSave" type="submit" class="btn btn-primary ml-2" value="Submit">

@@ -6,8 +6,11 @@ navToggle.addEventListener ("click", function () {
   navMenu.classList.toggle("show-nav");
   navToggle.classList.toggle("toggle-active");
   logo.classList.toggle("text-dark");
-
 });
+
+function hideNavbar() {
+  navMenu.classList.toggle("show-nav")
+}
 
 window.onscroll = function () {
     const header = document.querySelector('nav');

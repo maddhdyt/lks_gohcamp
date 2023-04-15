@@ -21,3 +21,5 @@ if (isset($_POST['btnUpdate'])) {
         echo "<script>alert('Gagal diupdate')</script>";
     }
 }
+
+?>

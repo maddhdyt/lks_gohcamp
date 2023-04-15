@@ -13,11 +13,11 @@ include 'partials/header.php'; ?>
                 <form action="func/galeryFunc.php" method="post" enctype="multipart/form-data" class="card-body">
                     <div class="form-group">
                         <label>Sumber</label>
-                        <input name="source" type="text" class="form-control">
+                        <input name="source" type="text" class="form-control" required>
                     </div>
                     <div class="form-group">
                         <label>Gambar</label>
-                        <input name="image" type="file" class="form-control" accept="image/*">
+                        <input name="image" type="file" class="form-control" accept="image/*" required>
                     </div>
                     <div class="card-footer text-right">
                         <a href="" class="btn btn-danger">Cancel</a>

@@ -138,22 +138,26 @@ html {
   margin: 0 auto;
   margin-top: 50px;
 }
+
 // Auth
 .login-wrapper {
   width: 100%;
   margin: 150px auto;
   @include flex(center, center);
+
   .card-login {
     width: 450px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
     border-radius: 8px;
     padding: 30px;
     background-color: #fff;
+
     p {
       color: #444;
       font-size: 14px;
       margin-top: 5px;
     }
+
     .logo {
       font-size: 32px;
       font-weight: 600;
@@ -167,9 +171,11 @@ html {
 
     .form-login {
       margin-top: 20px;
+
       .form-group {
         position: relative;
         margin-bottom: 15px;
+
         .form-control {
           outline: none;
           width: 100%;
@@ -178,10 +184,12 @@ html {
           border-radius: 8px;
           transition: all 500ms;
           font-size: 14px;
+
           &:focus {
             border: 1px solid $primary-color;
           }
         }
+
         .btn-submit {
           padding: 16px 18px;
           background-color: $primary-color;
@@ -220,6 +228,7 @@ header {
 
 .page-header {
   height: 250px;
+
   .header-content {
     .header-title {
       h2 {
@@ -504,18 +513,45 @@ header {
         font-size: 28px;
         font-weight: 600;
         margin-top: 10px;
+        color: #444;
+        margin-bottom: 25px;
       }
 
+    .contact-group {
+      @include flex(center, start);
+      margin-top: 15px;
+      gap: 10px;
+      p {
+        font-size: 14px;
+        color: #444444cd;
+        font-weight: 500;
+      }
+      i {
+        font-size: 24px;
+        color: #444444c5;
+      }
+    }
+
       .btn {
+        display: flex;
+        gap: 5px;
+        align-items: center;
         width: fit-content;
-        padding: 14px 28px;
+        padding: 14px 20px;
         border-radius: 8px;
         background-color: $primary-color;
-        color: #fff;
-        font-size: 14px;
-        display: block;
         text-decoration: none;
         margin-top: 20px;
+
+        p {
+          color: #fff;
+          font-size: 14px;
+        }
+
+        i {
+          color: #fff;
+          font-size: 24px;
+        }
       }
     }
 
@@ -698,21 +734,25 @@ header {
 .testimonial-wrapper {
   @include grid(1, 1, 20px);
   margin-top: 40px;
+
   .card {
     padding: 35px;
     border-radius: 8px;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
     background-color: #fff;
+
     .icon {
       width: 40px;
       @include img_fit();
     }
+
     h2 {
       font-size: 18px;
       color: #444;
       font-weight: 600;
       margin-top: 10px;
     }
+
     p {
       font-size: 14px;
       color: #444444dc;
@@ -763,6 +803,8 @@ footer {
       gap: 20px;
 
       .icon {
+        text-decoration: none;
+        display: block;
         margin-top: 20px;
         width: 45px;
         height: 45px;
@@ -797,11 +839,14 @@ footer {
       li {
         list-style: none;
 
-        a {
+        a,
+        p {
+          display: block;
           font-size: 14px;
           text-decoration: none;
           color: #ffffffc2;
         }
+
       }
     }
   }
@@ -1074,6 +1119,7 @@ footer {
 
         .desc {
           width: 66%;
+
           span {
             font-size: 12px;
             color: #444444ca;
@@ -1231,6 +1277,7 @@ footer {
 
   .page-header {
     height: 300px;
+
     .header-content {
       .header-title {
         h2 {
@@ -1295,6 +1342,7 @@ footer {
       font-size: 16px;
       line-height: 28px;
     }
+
     .highlight {
       width: 100px;
       height: 40px;
@@ -1312,7 +1360,13 @@ footer {
         }
 
         h2 {
-          font-size: 42px;
+          font-size: 32px;
+        }
+
+        .contact-group {
+          p {
+            font-size: 16px;
+          }
         }
 
         .btn {
@@ -1391,6 +1445,7 @@ footer {
   .search-box {
     .form-group {
       width: fit-content;
+
       .form-control {
         width: 300px;
       }
@@ -1399,6 +1454,7 @@ footer {
 
   .news-page-wrapper {
     @include grid(4, 1, 20px);
+
     .news-card {
       .img {
         height: 200px;
@@ -1440,11 +1496,13 @@ footer {
 
     .col-2 {
       @include col_span(2);
+
       .side-news-wrapper {
         .side-news {
           .img {
             flex-grow: 0;
           }
+
           .desc {
             flex-grow: 1;
           }
