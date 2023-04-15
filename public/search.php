@@ -182,6 +182,11 @@ if ($page < ($pages - $jumlahLink)) {
                     </div>
                 </div>
             </div>
+            <div class="copy">
+                <div class="container">
+                    <p>&copy;Copyright <script>document.write(new Date().getFullYear())</script>, GohCamp LKS Sumedang</p>
+                </div>
+            </div>
         </footer>
     </div>
     <script>

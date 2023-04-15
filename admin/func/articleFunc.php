@@ -18,10 +18,10 @@ if (isset($_POST['btnSave'])) {
     $image = $random . '_' . $namafile;
     $add = mysqli_query($conn, "INSERT INTO article (id_article, title, description, image, img_src, date, writer_name, keyword, slug) VALUES('', '$title', '$description', '$image', '$source', '$date', '$writerName', '$keyword', '$slug')")  or die(mysqli_error($conn));
     if ($add) {
-        echo "<script>alert('data berhasil di update')</script>";
+        echo "<script>alert('Artikel berhasil ditambahkan!')</script>";
         header("refresh:1; url=../article.php");
     } else {
-        echo "<script>alert('Gagal dihapus')</script>";
+        echo "<script>alert('Gagal menyimpan')</script>";
     }
     
 }
@@ -43,14 +43,14 @@ if (isset($_POST['btnUpdate'])) {
 
     if ($namafile ==  "") {
         mysqli_query($conn, "UPDATE article SET title = '$title', description = '$description', date = '$date', image = '$imageOld', img_src='$source', writer_name='$writerName', keyword = '$keyword', slug = '$slug' WHERE id_article = $id");
-        echo "<script>alert('data berhasil di update')</script>";
+        echo "<script>alert('Artikel berhasil diupdate!')</script>";
         header("refresh:1; url=../article.php");
     } else {
     unlink("../../assets/img/" . $imageOld);
     move_uploaded_file($tmpFile, $dir . $random . '_' . $namafile);
     $image = $random . '_' . $namafile;
     mysqli_query($conn, "UPDATE article SET title = '$title', description = '$description', date = '$date', image = '$image', img_src='$source', writer_name='$writerName', keyword = '$keyword', slug = '$slug' WHERE id_article = $id");
-    echo "<script>alert('data berhasil di update')</script>";
+    echo "<script>alert('Artikel berhasil diupdate!')</script>";
     header("refresh:1; url=../article.php");
     }
 }
@@ -63,7 +63,7 @@ if (isset($_POST['btnDelete'])) {
     unlink("../../assets/img/" . $data['image']);
     $delete = mysqli_query($conn, "DELETE FROM article WHERE id_article = '$id'") or die(mysqli_error($conn));
         if ($delete) {
-            echo "<script>alert('Data berhasil dihapus');
+            echo "<script>alert('Artikel berhasil dihapus!');
             </script>";
             header("refresh:1; url=../article.php");
         } else {

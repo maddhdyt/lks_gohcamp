@@ -48,7 +48,7 @@ if ($page < ($pages - $jumlahLink)) {
 <body>
     <div class="wrapper">
         <header class="page-header">
-            <img class="bg-banner" src="../assets/img/12-1-Agrowisata-Kampung-Nangorak-By-www.nangorakcamp.com_.jpg" alt="">
+            <img class="bg-banner" src="/lks_sumedang/assets/img/<?= $data2['bg_banner'] ?>">
             <nav class="navbar">
                 <div class="container">
                     <a href="/lks_sumedang/" class="logo">
@@ -159,6 +159,11 @@ if ($page < ($pages - $jumlahLink)) {
                             <li><p>Email : <?= $data2['email'] ?></p></li>
                         </ul>
                     </div>
+                </div>
+            </div>
+            <div class="copy">
+                <div class="container">
+                    <p>&copy;Copyright <script>document.write(new Date().getFullYear())</script>, GohCamp LKS Sumedang</p>
                 </div>
             </div>
         </footer>

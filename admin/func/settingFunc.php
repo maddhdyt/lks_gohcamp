@@ -26,14 +26,14 @@ if (isset($_POST['btnUpdate'])) {
 
     if ($namafile ==  "") {
         mysqli_query($conn, "UPDATE setting SET bg_banner = '$bgBanner', source_banner = '$bannerSource', head_desc = '$headDesc', profil_desc = '$profilDesc', profil_video = '$profilVideo', address = '$address', contact = '$contact', email = '$email', med_facebook = '$medFacebook', med_instagram = '$medInstagram', med_tiktok = '$medTiktok', med_youtube = '$medYoutube' WHERE id_setting = $id");
-        echo "<script>alert('data berhasil di update')</script>";
+        echo "<script>alert('Setting berhasil di update')</script>";
         header("refresh:1; url=../setting.php");
     } else {
     unlink("../../assets/img/" . $data['bg_banner']);
     move_uploaded_file($tmpFile, $dir . $random . '_' . $namafile);
     $gambar = $random . '_' . $namafile;
     mysqli_query($conn, "UPDATE setting SET bg_banner = '$gambar', source_banner = '$bannerSource', head_desc = '$headDesc', profil_desc = '$profilDesc', profil_video = '$profilVideo', address = '$address', contact = '$contact', email = '$email', med_facebook = '$medFacebook', med_instagram = '$medInstagram', med_tiktok = '$medTiktok', med_youtube = '$medYoutube' WHERE id_setting = $id");
-    echo "<script>alert('data berhasil di update')</script>";
+    echo "<script>alert('Setting berhasil di update')</script>";
     header("refresh:1; url=../setting.php");
     }
 }

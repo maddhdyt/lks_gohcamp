@@ -9,7 +9,7 @@ navToggle.addEventListener ("click", function () {
 });
 
 function hideNavbar() {
-  navMenu.classList.toggle("show-nav")
+  navMenu.classList.remove("show-nav")
 }
 
 window.onscroll = function () {

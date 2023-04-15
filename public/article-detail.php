@@ -59,6 +59,7 @@ $latest = mysqli_query($conn, "SELECT * FROM article ORDER BY id_article DESC LI
                 <div class="news-detail-wrapper">
                     <div class="col-1">
                         <div class="news-img">
+                            <a href="<?= $data['img_src'] ?>"></a>
                             <img src="/lks_sumedang/assets/img/<?= $data['image'] ?>" alt="">
                         </div>
                         <div class="news-title">
@@ -134,6 +135,11 @@ $latest = mysqli_query($conn, "SELECT * FROM article ORDER BY id_article DESC LI
                             <li><p>Email : <?= $data3['email'] ?></p></li>
                         </ul>
                     </div>
+                </div>
+            </div>
+            <div class="copy">
+                <div class="container">
+                    <p>&copy;Copyright <script>document.write(new Date().getFullYear())</script>, GohCamp LKS Sumedang</p>
                 </div>
             </div>
         </footer>

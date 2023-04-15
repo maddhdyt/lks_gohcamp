@@ -29,9 +29,9 @@ $data4 = mysqli_fetch_assoc($statistic);
     <!-- Library -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="assets/vendor/fancybox/fancy.css" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
     <title>Samalengoh Camp Sumedang</title>
 </head>
+
 <body>
     <div class="wrapper">
         <header>
@@ -88,11 +88,11 @@ $data4 = mysqli_fetch_assoc($statistic);
                             <div class="col">
                                 <p>Status</p>
                                 <h4><?php if ($data4['status'] == 'tersedia') {
-                                    echo "Tersedia";
-                                } else if ($data4['status'] == 'penuh') {
-                                    echo "Penuh";
-                                }
-                                 ?></h4>
+                                        echo "Tersedia";
+                                    } else if ($data4['status'] == 'penuh') {
+                                        echo "Penuh";
+                                    }
+                                    ?></h4>
                             </div>
                         </div>
                         <a href="https://wa.me/6283192103301?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="btn">
@@ -109,9 +109,9 @@ $data4 = mysqli_fetch_assoc($statistic);
             <div class="container">
                 <div class="section-title">
                     <p>Testimonial</p>
-                        <h2>Kesan Pengunjung</h2>
-                        <div class="highlight"></div>
-                    </div>
+                    <h2>Kesan Pengunjung</h2>
+                    <div class="highlight"></div>
+                </div>
                 <div class="testimonial-wrapper">
                     <div class="card">
                         <div class="icon">
@@ -149,6 +149,7 @@ $data4 = mysqli_fetch_assoc($statistic);
                     while ($data2 = mysqli_fetch_assoc($galery)) :
                     ?>
                         <div class="img-box">
+                            <i class='bx bx-expand'></i>
                             <a href="assets/img/<?= $data2['image'] ?>" data-fancybox="gallery" data-caption="<?= $data2['source'] ?>">
                                 <img src="assets/img/<?= $data2['image'] ?>">
                             </a>
@@ -194,15 +195,20 @@ $data4 = mysqli_fetch_assoc($statistic);
                     <div class="col-1">
                         <h2>Kontak Kami</h2>
                         <div class="contact-group">
-                            <i class='bx bx-map-alt'></i><p><?= $data['address'] ?></p>
+                            <i class='bx bx-map-alt'></i>
+                            <p><?= $data['address'] ?></p>
                         </div>
                         <div class="contact-group">
-                        <i class='bx bx-envelope' ></i><p><?= $data['email'] ?></p>
+                            <i class='bx bx-envelope'></i>
+                            <p><?php echo $data['email'] ?></p>
                         </div>
                         <div class="contact-group">
-                        <i class='bx bxs-phone'></i></i><p><?= $data['contact'] ?></p>
+                            <i class='bx bxs-phone'></i></i>
+                            <p><?= $data['contact'] ?></p>
                         </div>
-                        <a href="https://wa.me/6283192103301?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="btn"><p>Hubungi via</p> <i class='bx bxl-whatsapp'></i></a>
+                        <a href="https://wa.me/6283192103301?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="btn">
+                            <p>Hubungi via</p> <i class='bx bxl-whatsapp'></i>
+                        </a>
                     </div>
                     <div class="col-2">
                         <iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Samalengoh+Camp,+Gunturmekar,+Sumedang+Regency,+West+Java,+Indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
@@ -239,24 +245,30 @@ $data4 = mysqli_fetch_assoc($statistic);
                         </ul>
                         <ul>
                             <li class="nav-title">Hubungi Kami</li>
-                            <li><p><?= $data['address'] ?></p></li>
-                            <li><p>Phone : <?= $data['contact'] ?></p></li>
-                            <li><p>Email : <?= $data['email'] ?></p></li>
+                            <li>
+                                <p><?= $data['address'] ?></p>
+                            </li>
+                            <li>
+                                <p>Phone : <?= $data['contact'] ?></p>
+                            </li>
+                            <li>
+                                <p>Email : <?= $data['email'] ?></p>
+                            </li>
                         </ul>
                     </div>
                 </div>
             </div>
             <div class="copy">
                 <div class="container">
-                    <p>&copy;Copyright <script>document.write(new Date().getFullYear())</script>, GohCamp LKS Sumedang</p>
+                    <p>&copy;Copyright <script>
+                            document.write(new Date().getFullYear())
+                        </script>, GohCamp LKS Sumedang</p>
                 </div>
             </div>
         </footer>
     </div>
     <script src="assets/vendor/fancybox/fancy.umd.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
-    <script src="assets/js/swiper.js"></script>
     <script>
         <?php
         include 'assets/js/main.js';

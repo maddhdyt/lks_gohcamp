@@ -47,7 +47,7 @@ include 'partials/header.php'; ?>
                     </div>
                     <div class="form-group">
                         <label>Gambar</label>
-                        <input name="image" type="file" class="form-control" value="" accept="image/*" required>
+                        <input name="image" type="file" class="form-control" value="" accept="image/*">
                     </div>
                     <div class="form-group">
                         <label>Sumber</label>

@@ -13,11 +13,11 @@ if (isset($_POST['btnUpdate'])) {
 
         $update = mysqli_query($conn, "UPDATE statistic SET visitors = '$visitors', tent = '$tent', status = '$status' WHERE id = $id ");
         if ($update) {
-            echo "<script>alert('Data berhasil diupdate');
+            echo "<script>alert('Statistik berhasil diubah');
                 </script>";
             header("refresh:1; url=../statistic.php");
         } else {
-            echo "<script>alert('Gagal diupdate')</script>";
+            echo "<script>alert('Statistik berhasil diubah')</script>";
         }
 
 }
