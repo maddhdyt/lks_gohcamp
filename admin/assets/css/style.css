@@ -167,8 +167,8 @@ html {
 }
 .banner-img-box {
   position: relative;
-  width: 300px;
-  height: 200px;
+  width: 100%;
+  aspect-ratio: 3/2;
   border-radius: 8px;
   overflow: hidden;
   margin: 0px 0 15px 0;
@@ -376,6 +376,10 @@ select.form-control:not([size]):not([multiple]),
 
 textarea.form-control {
   height: 120px !important;
+}
+
+textarea.desc-textarea {
+  height: 250px !important;
 }
 
 .custom-control {

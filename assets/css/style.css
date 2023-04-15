@@ -253,6 +253,7 @@ header nav {
 .navbar .container .logo {
   font-size: 28px;
   font-weight: 600;
+  text-decoration: none;
   color: #fff;
   z-index: 9999;
   transition: all 500ms;
@@ -521,6 +522,7 @@ header nav {
   aspect-ratio: 1/1;
   background-color: #ddd;
   overflow: hidden;
+  border-radius: 4px;
   overflow: hidden;
   position: relative;
 }
@@ -552,6 +554,7 @@ header nav {
   width: 100%;
   height: 200px;
   overflow: hidden;
+  border-radius: 4px;
   overflow: hidden;
   position: relative;
 }
@@ -648,18 +651,20 @@ header nav {
   color: rgba(68, 68, 68, 0.862745098);
   margin-top: 10px;
   text-align: justify;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 4;
-  /* number of lines to show */
-  line-clamp: 4;
-  -webkit-box-orient: vertical;
 }
 
 footer {
-  padding: 80px 0;
   background-color: #444;
   margin-top: 120px;
+}
+footer .copy {
+  padding: 40px 0;
+  background-color: #444;
+  border-top: 1px solid #ddd;
+}
+footer .copy .container p {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.9058823529);
 }
 
 .footer-wrapper {
@@ -667,6 +672,7 @@ footer {
   grid-template-columns: repeat(1, minmax(0, 1fr));
   grid-template-rows: repeat(1, minmax(0, 1fr));
   gap: 50px;
+  padding: 80px 0;
 }
 .footer-wrapper .col-1 {
   grid-column: span 2/span 2;
@@ -675,6 +681,7 @@ footer {
 .footer-wrapper .col-1 .logo {
   color: #fff;
   font-size: 24px;
+  text-decoration: none;
 }
 .footer-wrapper .col-1 .logo span {
   font-weight: 600;
@@ -792,6 +799,7 @@ footer {
   width: 100%;
   height: 200px;
   overflow: hidden;
+  border-radius: 4px;
   overflow: hidden;
   position: relative;
 }
@@ -879,7 +887,7 @@ footer {
 }
 .news-page-wrapper .null-alert h2 {
   color: #444;
-  font-size: 24px;
+  font-size: 18px;
   font-weight: 400;
 }
 .news-page-wrapper .null-alert span {
@@ -1110,10 +1118,43 @@ footer {
   .container {
     width: 90%;
   }
+  .galery-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .news-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .news-page-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .maps-wrapper .maps .col-2 iframe {
+    height: 400px;
+  }
+  .testimonial-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: repeat(1, minmax(0, 1fr));
+    gap: 20px;
+  }
+  .news-detail-wrapper .col-1 .news-img {
+    height: 400px;
+  }
 }
 @media (min-width: 1024px) {
   .container {
     width: 85%;
+  }
+  .footer .container p {
+    font-size: 16px;
   }
   .section-title {
     margin-top: 120px;

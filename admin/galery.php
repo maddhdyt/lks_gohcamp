@@ -34,7 +34,7 @@ include 'partials/header.php'; ?>
                                         <input type="hidden" name="id" value="<?= $data['id'] ?> ">
                                         <input type="hidden" name="image" value="<?= $data['image'] ?> ">
                                         <a href="editGalery.php?id=<?= $data['id'] ?>" class="btn_control primary text-white"><i class="fa-regular fa-pen-to-square"></i></a>
-                                        <button type="submit" name="btnDelete" class="btn_control secondary text-white" onclick="return confirm('Yakin untuk menghapus?')"><i class="fa-solid fa-trash"></i></button>
+                                        <button type="submit" name="btnDelete" class="btn_control danger text-white" onclick="return confirm('Yakin untuk menghapus?')"><i class="fa-solid fa-trash"></i></button>
                                     </div>
                                 </form>
                             </td>

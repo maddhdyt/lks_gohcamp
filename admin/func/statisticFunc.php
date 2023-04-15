@@ -11,15 +11,15 @@ if (isset($_POST['btnUpdate'])) {
     $tent = $_POST['tent'];
     $status = $_POST['status'];
 
-    $update = mysqli_query($conn, "UPDATE statistic SET visitors = '$visitors', tent = '$tent', status = '$status' WHERE id = $id ");
+        $update = mysqli_query($conn, "UPDATE statistic SET visitors = '$visitors', tent = '$tent', status = '$status' WHERE id = $id ");
+        if ($update) {
+            echo "<script>alert('Data berhasil diupdate');
+                </script>";
+            header("refresh:1; url=../statistic.php");
+        } else {
+            echo "<script>alert('Gagal diupdate')</script>";
+        }
 
-    if ($update) {
-        echo "<script>alert('Data berhasil diupdate');
-            </script>";
-        header("refresh:1; url=../statistic.php");
-    } else {
-        echo "<script>alert('Gagal diupdate')</script>";
-    }
 }
 
 ?>

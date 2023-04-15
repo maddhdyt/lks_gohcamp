@@ -38,15 +38,16 @@ $data4 = mysqli_fetch_assoc($statistic);
             <img class="bg-banner" src="assets/img/<?= $data['bg_banner'] ?>" alt="">
             <nav class="navbar">
                 <div class="container">
-                    <div class="logo">
+                    <a href="#" class="logo">
                         Goh<span class="text-primary">Camp</span>
-                    </div>
+                    </a>
                     <ul class="nav-menu">
                         <li><a onclick="hideNavbar()" href="#">Beranda</a></li>
                         <li><a onclick="hideNavbar()" href="#about">Tentang</a></li>
+                        <li><a onclick="hideNavbar()" href="#testimonial">Testimonial</a></li>
                         <li><a onclick="hideNavbar()" href="#galery">Galeri</a></li>
                         <li><a onclick="hideNavbar()" href="/lks_sumedang/public/article.php">Berita</a></li>
-                        <li><a onclick="hideNavbar()" href="https://wa.me/6283126902110?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="icon-box"><i class='bx bx-phone-call'></i></a></li>
+                        <li><a onclick="hideNavbar()" href="https://wa.me/6283192103301?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="icon-box"><i class='bx bx-phone-call'></i></a></li>
                     </ul>
                     <div class="nav-toggle">
                         <i class='bx bx-menu'></i>
@@ -59,7 +60,7 @@ $data4 = mysqli_fetch_assoc($statistic);
                     <div class="highlight"></div>
                 </div>
                 <p><?= $data['head_desc']; ?></p>
-                <a href="" class="icon-box">
+                <a href="#about" class="icon-box">
                     <i class='bx bx-toggle-left'></i>
                 </a>
                 <span class="banner-source">source: <?= $data['source_banner'] ?></span>
@@ -94,7 +95,7 @@ $data4 = mysqli_fetch_assoc($statistic);
                                  ?></h4>
                             </div>
                         </div>
-                        <a href="https://wa.me/6283126902110?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="btn">
+                        <a href="https://wa.me/6283192103301?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="btn">
                             Booking Sekarang!
                         </a>
                     </div>
@@ -116,22 +117,22 @@ $data4 = mysqli_fetch_assoc($statistic);
                         <div class="icon">
                             <img src="assets/icon/Frame (1).svg">
                         </div>
-                        <h2>Kazuhito Takeru</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus harum consectetur, aliquid accusamus suscipit quisquam, quod laudantium quae ea dolor a inventore sed. Modi, consectetur.</p>
+                        <h2>Ahmad Hidayat</h2>
+                        <p>Tempatnya enak banget, apalagi pas liat sunrise viewnya bagus banget. Jadi pengen lagi kumpul disana bareng temen - temen, gokill sih murah lagi.</p>
                     </div>
                     <div class="card">
                         <div class="icon">
                             <img src="assets/icon/Frame (1).svg">
                         </div>
-                        <h2>Kazuhito Takeru</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus harum consectetur, aliquid accusamus suscipit quisquam, quod laudantium quae ea dolor a inventore sed. Modi, consectetur.</p>
+                        <h2>Ceu Edoh</h2>
+                        <p>Meni enakeun pisan jaba bareresih, seueur tempat paragi poto deuih. Instagramebel pisan lahh</p>
                     </div>
                     <div class="card">
                         <div class="icon">
                             <img src="assets/icon/Frame (1).svg">
                         </div>
-                        <h2>Kazuhito Takeru</h2>
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minus harum consectetur, aliquid accusamus suscipit quisquam, quod laudantium quae ea dolor a inventore sed. Modi, consectetur.</p>
+                        <h2>Steven John</h2>
+                        <p>Here's perfect place to camp or chill with your friends, i usually going here because the ticket is very cheap but still worth it</p>
                     </div>
                 </div>
             </div>
@@ -199,9 +200,9 @@ $data4 = mysqli_fetch_assoc($statistic);
                         <i class='bx bx-envelope' ></i><p><?= $data['email'] ?></p>
                         </div>
                         <div class="contact-group">
-                            <i class='bx bxl-whatsapp'></i><p><?= $data['contact'] ?></p>
+                        <i class='bx bxs-phone'></i></i><p><?= $data['contact'] ?></p>
                         </div>
-                        <a href="https://wa.me/6283126902110?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="btn"><p>Hubungi via</p> <i class='bx bxl-whatsapp'></i></a>
+                        <a href="https://wa.me/6283192103301?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="btn"><p>Hubungi via</p> <i class='bx bxl-whatsapp'></i></a>
                     </div>
                     <div class="col-2">
                         <iframe frameborder="0" src="https://www.google.com/maps/embed/v1/place?q=Samalengoh+Camp,+Gunturmekar,+Sumedang+Regency,+West+Java,+Indonesia&key=AIzaSyBFw0Qbyq9zTFTd-tUY6dZWTgaQzuU17R8"></iframe>
@@ -213,9 +214,9 @@ $data4 = mysqli_fetch_assoc($statistic);
             <div class="container">
                 <div class="footer-wrapper">
                     <div class="col-1">
-                        <div class="logo">
+                        <a href="#" class="logo">
                             Goh<span class="text-primary">Camp</span>
-                        </div>
+                        </a>
                         <div class="icon-group">
                             <a href="<?= $data['med_facebook'] ?>" class="icon"><i class='bx bxl-facebook'></i></a>
                             <a href="<?= $data['med_instagram'] ?>" class="icon"><i class='bx bxl-instagram'></i></a>
@@ -243,6 +244,11 @@ $data4 = mysqli_fetch_assoc($statistic);
                             <li><p>Email : <?= $data['email'] ?></p></li>
                         </ul>
                     </div>
+                </div>
+            </div>
+            <div class="copy">
+                <div class="container">
+                    <p>&copy;Copyright <script>document.write(new Date().getFullYear())</script>, GohCamp LKS Sumedang</p>
                 </div>
             </div>
         </footer>

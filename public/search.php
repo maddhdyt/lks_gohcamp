@@ -63,15 +63,16 @@ if ($page < ($pages - $jumlahLink)) {
             <img class="bg-banner" src="../assets/img/12-1-Agrowisata-Kampung-Nangorak-By-www.nangorakcamp.com_.jpg" alt="">
             <nav class="navbar">
                 <div class="container">
-                    <div class="logo">
+                    <a href="/lks_sumedang/" class="logo">
                         Goh<span class="text-primary">Camp</span>
-                    </div>
+                    </a>
                     <ul class="nav-menu">
                         <li><a href="/lks_sumedang/">Beranda</a></li>
-                        <li><a href="/lks_sumedang/index#about">Tentang</a></li>
-                        <li><a href="/lks_sumedang/index#galery">Galeri</a></li>
-                        <li><a href="/lks_sumedang/index#news">Berita</a></li>
-                        <li><a href="https://wa.me/6283126902110?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="icon-box"><i class='bx bx-phone-call'></i></a></li>
+                        <li><a href="/lks_sumedang/index.php#about">Tentang</a></li>
+                        <li><a href="/lks_sumedang/index.php#testimonial">Testimonial</a></li>
+                        <li><a href="/lks_sumedang/index.php#galery">Galeri</a></li>
+                        <li><a href="/lks_sumedang/index.php#news">Berita</a></li>
+                        <li><a href="https://wa.me/6283192103301?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="icon-box"><i class='bx bx-phone-call'></i></a></li>
                     </ul>
                     <div class="nav-toggle">
                         <i class='bx bx-menu'></i>
@@ -149,9 +150,9 @@ if ($page < ($pages - $jumlahLink)) {
             <div class="container">
                 <div class="footer-wrapper">
                     <div class="col-1">
-                        <div class="logo">
+                        <a href="/lks_sumedang/" class="logo">
                             Goh<span class="text-primary">Camp</span>
-                        </div>
+                        </a>
                         <div class="icon-group">
                             <a href="<?= $data2['med_facebook'] ?>" class="icon"><i class='bx bxl-facebook'></i></a>
                             <a href="<?= $data2['med_instagram'] ?>" class="icon"><i class='bx bxl-instagram'></i></a>

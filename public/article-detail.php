@@ -3,7 +3,7 @@ include '../admin/core/conn.php';
 
 // setting data
 $setting = mysqli_query($conn, "SELECT * FROM setting WHERE id_setting = 1");
-$data2 = mysqli_fetch_assoc($setting);
+$data3 = mysqli_fetch_assoc($setting);
 
 $id = $_GET['id'];
 $show = mysqli_query($conn, "SELECT * FROM article WHERE id_article = $id");
@@ -37,15 +37,16 @@ $latest = mysqli_query($conn, "SELECT * FROM article ORDER BY id_article DESC LI
         <header class="news-page-header">
             <nav class="navbar white-navbar">
                 <div class="container">
-                    <div class="logo">
+                    <a href="/lks_sumedang/" class="logo">
                         Goh<span class="text-primary">Camp</span>
-                    </div>
+                    </a>
                     <ul class="nav-menu">
                     <li><a href="/lks_sumedang/">Beranda</a></li>
-                        <li><a href="/lks_sumedang/index#about">Tentang</a></li>
-                        <li><a href="/lks_sumedang/index#galery">Galeri</a></li>
-                        <li><a href="/lks_sumedang/index#news">Berita</a></li>
-                        <li><a href="https://wa.me/6283126902110?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="icon-box"><i class='bx bx-phone-call'></i></a></li>
+                        <li><a href="/lks_sumedang/index.php#about">Tentang</a></li>
+                        <li><a href="/lks_sumedang/index.php#testimonial">Testimonial</a></li>
+                        <li><a href="/lks_sumedang/index.php#galery">Galeri</a></li>
+                        <li><a href="/lks_sumedang/index.php#news">Berita</a></li>
+                        <li><a href="https://wa.me/6283192103301?text=halo%20kak,%20aku%20mau%20booking%20tempat%20camping!" class="icon-box"><i class='bx bx-phone-call'></i></a></li>
                     </ul>
                     <div class="nav-toggle">
                         <i class='bx bx-menu'></i>
@@ -103,14 +104,14 @@ $latest = mysqli_query($conn, "SELECT * FROM article ORDER BY id_article DESC LI
             <div class="container">
                 <div class="footer-wrapper">
                     <div class="col-1">
-                        <div class="logo">
+                        <a href="/lks_sumedang/" class="logo">
                             Goh<span class="text-primary">Camp</span>
-                        </div>
+                        </a>
                         <div class="icon-group">
-                            <a href="<?= $data2['med_facebook'] ?>" class="icon"><i class='bx bxl-facebook'></i></a>
-                            <a href="<?= $data2['med_instagram'] ?>" class="icon"><i class='bx bxl-instagram'></i></a>
-                            <a href="<?= $data2['med_tiktok'] ?>" class="icon"><i class='bx bxl-tiktok'></i></a>
-                            <a href="<?= $data2['med_youtube'] ?>" class="icon"><i class='bx bxl-youtube'></i></a>
+                            <a href="<?= $data3['med_facebook'] ?>" class="icon"><i class='bx bxl-facebook'></i></a>
+                            <a href="<?= $data3['med_instagram'] ?>" class="icon"><i class='bx bxl-instagram'></i></a>
+                            <a href="<?= $data3['med_tiktok'] ?>" class="icon"><i class='bx bxl-tiktok'></i></a>
+                            <a href="<?= $data3['med_youtube'] ?>" class="icon"><i class='bx bxl-youtube'></i></a>
                         </div>
                     </div>
                     <div class="col-2">
@@ -128,9 +129,9 @@ $latest = mysqli_query($conn, "SELECT * FROM article ORDER BY id_article DESC LI
                         </ul>
                         <ul>
                             <li class="nav-title">Hubungi Kami</li>
-                            <li><p><?= $data2['address'] ?></p></li>
-                            <li><p>Phone : <?= $data2['contact'] ?></p></li>
-                            <li><p>Email : <?= $data2['email'] ?></p></li>
+                            <li><p><?= $data3['address'] ?></p></li>
+                            <li><p>Phone : <?= $data3['contact'] ?></p></li>
+                            <li><p>Email : <?= $data3['email'] ?></p></li>
                         </ul>
                     </div>
                 </div>
